@@ -21,7 +21,7 @@ Tasks are stored at `data/tasks.json` (auto-created on first run).
 docker build -t todo-cli .
 ```
 
-## Run *interactively* inside Docker (recommended for this project)
+## Run *interactively* inside Docker 
 Start a shell inside the container and run Python commands there:
 - **macOS/Linux (bash/zsh):**
 ```bash
@@ -39,7 +39,7 @@ python3 todo.py remove 1
 ```
 
 > Why `--entrypoint /bin/bash`?  
-> The image has an entrypoint that directly runs the CLI (so you can pass args from outside when you want). For the interactive exercise, we **override** it to get a shell and run the Python commands *inside* the running container.
+> The image has an entrypoint that directly runs the CLI (so we can pass args from outside when we want). For the interactive exercise, we **override** it to get a shell and run the Python commands *inside* the running container.
 
 ## Alternative: pass commands from outside (non-interactive)
 ```bash
