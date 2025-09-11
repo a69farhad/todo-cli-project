@@ -29,7 +29,7 @@ def load_tasks() -> list[dict]:
         with open(DATA_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     except json.JSONDecodeError:
-        # If file is corrupted, start fresh (or you could raise an error)
+        # If file is corrupted, start fresh (or raise an error)
         return []
 
 
